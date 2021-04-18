@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Tufts HCI Lab',
   description: 'Tufts Human-robot Interaction Laboratory',
-  base: '/hcilab_website_official/',
+  base: '/hci_website_from_ououe/',
   dest: './docs/',
   theme: require.resolve('../../theme_ououe/'),
   themeConfig: {

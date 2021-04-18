@@ -1,6 +1,11 @@
 ---
 title: Backup Post
 layout: Page
+
+tags:
+  - people_tag
+categories:
+  - people_category
 ---
 
 # A blog theme for VuePress

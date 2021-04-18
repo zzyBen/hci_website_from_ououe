@@ -16,7 +16,7 @@ export default {
     Pagination
   },
   mounted() {
-    console.log(this.$isHome)
+    console.log('Is it home? '+this.$isHome)
   }
 }
 </script>

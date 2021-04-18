@@ -1,6 +1,5 @@
 # HCI Website From Ououe (Vuepress Theme)
 
----
 
 ## Folder structure
 

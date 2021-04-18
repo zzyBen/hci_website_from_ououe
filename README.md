@@ -14,16 +14,10 @@
 - theme_ououe     // The local theme files of Ououe
 ```
 
-## Usage
-
-``` js
-// .vuepress -> config.js
-module.exports = {
-  theme: 'ououe',
-  themeConfig: {
-    // ...
-  }
-}
+## Usage (defined in package.json)
+1. Run the server locally
+```sh
+yarn dev
 ```
 
 ## License

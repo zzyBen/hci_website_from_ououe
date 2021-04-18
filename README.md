@@ -1,21 +1,17 @@
-# vuepress-theme-ououe
-
-> A blog theme for VuePress
-
-Live Demo: [My Blog](https://ououe.com)
-
-[Documentation](https://tolking.github.io/vuepress-theme-ououe)
-
-Uses [vuepress-theme-ououe-template](https://github.com/tolking/vuepress-theme-ououe-template) to starter
+# HCI Website From Ououe (Vuepress Theme)
 
 ---
 
-## Installation
+## Folder structure
 
-``` sh
-yarn add vuepress-theme-ououe
-# or
-npm i vuepress-theme-ououe
+```
+- docs            // The final Tufts HCI Lab website built by Vuepress
+
+- docs_original   // The original vuepress source code to build the documentation for Ououe theme
+
+- examples        // The vuepress source code of Tufts HCI Lab
+
+- theme_ououe     // The local theme files of Ououe
 ```
 
 ## Usage

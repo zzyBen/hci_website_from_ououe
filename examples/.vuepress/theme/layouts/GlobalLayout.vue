@@ -1,8 +1,11 @@
 <template>
   <section id="global-layout">
+    <!-- Header -->
     <app-header :class="{ 'cover-header': showCover }">
       <header-cover v-if="showCover" :item="$cover" />
     </app-header>
+
+    <!-- Button to switch theme -->
     <label
       v-if="
         this.$themeConfig.showThemeButton &&
@@ -18,10 +21,16 @@
         :checked="colorScheme.scheme === 'dark'"
       />
     </label>
+
+
+    <!-- The layout content -->
     <transition name="fade-transform" mode="out-in" appear>
       <component :is="layout" :key="$page.path" />
     </transition>
+
+    <!-- Footer -->
     <app-footer />
+
   </section>
 </template>
 
@@ -48,16 +57,17 @@ export default {
   },
   computed: {
     layout() {
-      const layout = this.$frontmatter.layout
+      const layout = this.$frontmatter.layout     // Load from yaml in md file
+      console.log(this.$frontmatter.layout)
       if (this.$page.path) {
-        if (
+        if (                                      // If defined in yaml, use it
           layout &&
           (this.$vuepress.getLayoutAsyncComponent(layout) ||
             this.$vuepress.getVueComponent(layout))
         ) {
           return layout
         }
-        return 'Layout'
+        return 'Layout'                           // If not defined, use Layout.vue
       }
       return 'NotFound'
     },

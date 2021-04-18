@@ -6,9 +6,8 @@ module.exports = {
   // theme: require.resolve('../../theme_ououe/'),
   // theme: path.resolve(__dirname, './theme'),
   themeConfig: {
-    // defaultTheme: { dark: [19, 6] },
     defaultTheme: 'dark',
-    // showThemeButton: false,
+    showThemeButton: false,
     cover: '/cover.jpg',
     logo: '/logo_ghost.png',
     // search: true,
@@ -27,6 +26,8 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Posts', link: '/posts/' },
+      { text: 'BackupPost', link: '/backup_post/' },
+      { text: 'People', link: '/people/' },
       { text: 'Doc', link: '/doc/' },
       { text: 'Tags', link: '/tag/' },
       { text: 'Categories', link: '/category/' },

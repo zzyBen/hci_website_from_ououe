@@ -2,7 +2,6 @@
   <section class="layout">
     <list :class="{ 'cover-list': $cover, 'home-list': $isHome }"></list>
     <pagination />
-    <!-- <p>sssss</p> -->
   </section>
 </template>
 
@@ -15,6 +14,9 @@ export default {
   components: {
     List,
     Pagination
+  },
+  mounted() {
+    console.log(this.$isHome)
   }
 }
 </script>

@@ -1,10 +1,13 @@
 node_modules/
 CHANGELOG.md
+.eslintrc.js
+.prettierrc
+.travis.yml
 
 # The ignored files from original ououe
 .DS_Store
 .npmignore
-.gitignore
+# .gitignore
 .editorconfig
 
 node_modules/

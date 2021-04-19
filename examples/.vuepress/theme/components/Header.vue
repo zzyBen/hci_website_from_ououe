@@ -61,10 +61,10 @@ export default {
       height $headerHeight
       .nav-link
         .link-logo
-          height $headerHeight
+          height $headerHeight * 0.5
           .logo-img
-            padding 14% 3% 0
-            height 25%
+            padding 10% 3% 0
+            height 40%
             // width 20%
         .link-list
           display inline-block

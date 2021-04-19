@@ -3,6 +3,7 @@
     <div class="header-navbar">
       <div class="flex-xbc main header-nav">
         <div class="nav-link">
+          <!-- Logo -->
           <router-link
             v-if="$themeConfig.logo"
             :to="$localePath"
@@ -10,6 +11,9 @@
           >
             <img-lazy :src="$themeConfig.logo" class="logo-img" alt="logo" />
           </router-link>
+          <br/>
+
+          <!-- The Nav links from config.js -->
           <nav class="link-list">
             <nav-link
               v-for="(item, index) in $themeConfig.nav"
@@ -59,16 +63,17 @@ export default {
         .link-logo
           height $headerHeight
           .logo-img
-            padding 16.5% 0
-            height 50%
+            padding 14% 3% 0
+            height 25%
+            // width 20%
         .link-list
           display inline-block
           .list-item
             display inline-block
             padding 0 .7rem
-            font-size 1.2rem
+            font-size 1rem
             color $whiteColor
-            line-height $headerHeight
+            line-height $headerHeight * 0.7
             &:after
               content ''
               display block

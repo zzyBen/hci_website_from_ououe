@@ -1,6 +1,6 @@
 ---
-title: Backup Post
-layout: Page
+title: People index
+# layout: Page
 
 tags:
   - people_tag

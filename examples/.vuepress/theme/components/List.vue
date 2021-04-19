@@ -1,5 +1,6 @@
 <template>
   <section class="flex-w main list">
+  <!-- <section class="flex-zzy-1 main list"> -->
     <router-link
       v-for="(item, index) in $list.posts"
       :key="index"
@@ -10,7 +11,8 @@
       <div v-if="item.frontmatter.image" class="flex-xcc item-img">
         <img-lazy :src="item.frontmatter.image" :alt="item.title" class="img" />
       </div>
-      <article class="flex-yb item-content">
+      <!-- <article class="flex-yb item-content"> -->
+        <article class="flex-yb item-content">
         <div v-if="getCategories(item.frontmatter)" class="content-categories">
           <router-link
             v-for="(item, index) in getCategories(item.frontmatter)"
@@ -48,6 +50,10 @@ export default {
     getTags(item) {
       return getTags(item)
     }
+  },
+  mounted() {
+    // console.log('Is it home? '+this.$isHome)
+    console.log(this.$list.posts)
   }
 }
 </script>
@@ -58,7 +64,8 @@ export default {
   margin-top ($headerHeight + 2rem)
   min-height "calc(100vh - 6.5rem - %s)" % $headerHeight
   .list-item
-    flex: 1 1 300px;
+    // flex: 1 1 300px;
+    width: 30%
     margin 0 .8rem 2rem
     min-height $listCardHeight
     border-radius .5rem
@@ -80,7 +87,7 @@ export default {
           transform scaleX(1)
           transition transform .5s ease-out
     .item-img
-      max-height ($listCardHeight / 1.5)
+      max-height ($listCardHeight / 2)
       overflow hidden
       .img
         height auto
@@ -136,15 +143,15 @@ export default {
 .cover-list
   margin-top -2rem
   min-height "calc(100vh - 2.5rem - %s)" % $coverHeight
-@media (min-width $phoneWidth)
-  .home-list
-    .list-item:nth-child(6n+1):not(.no-image)
-      flex: 1 1 100%;
-      flex-direction: row;
-      .item-img
-        min-height 19rem
-      .item-content
-        flex: 1 1 60%
+// @media (min-width $phoneWidth)
+//   .home-list
+//     .list-item:nth-child(6n+1):not(.no-image)
+//       flex: 1 1 100%;
+//       flex-direction: row;
+//       .item-img
+//         min-height 19rem
+//       .item-content
+//         flex: 1 1 60%
 @media (max-width $phoneWidth)
   .list
     .list-item

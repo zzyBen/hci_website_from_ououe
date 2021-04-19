@@ -9,8 +9,8 @@ module.exports = {
     defaultTheme: 'dark',
     showThemeButton: false,
     cover: '/cover.jpg',
-    logo: '/logo_ghost.png',
-    // search: true,
+    logo: '/logo_hci.png',
+    search: false,
     // backgroundImage: false,
     // pageGroup: 5,
     // postTime: {
